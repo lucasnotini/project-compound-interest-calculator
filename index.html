@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Juros Compostos</title>
+
+<style>
+
+    body{
+        background-color: black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }    
+
+    .containerCalculadora{
+        background-color: #F8F3FE;
+        width: 300px;
+        height: 600px;
+        text-align: right;
+        margin: auto;
+        color: rgb(41, 40, 40);
+        border-radius: 10px;
+        overflow: hidden;
+        
+
+    }
+    
+    .containerTitulo{
+        text-align: center;
+        padding: 10px 20px 0 20px;
+        
+    }
+
+    .div1, .div2, .div3{
+        background-color: none;
+        padding-right: 10%;
+        padding-bottom: 0;
+        height: 10%;
+        font-size: 20px;
+        color: rgb(71, 69, 69);
+    }
+
+    h4{
+        background-color: none;
+        display: inline-block;
+        
+    }
+
+    input{
+        width: 100px;
+        background-color: none;
+        padding: 5px;
+        font-size: 20px;
+        text-align: center;
+        border: solid 1px rgb(207, 207, 207);
+        border-radius: 5px;
+        
+    }
+
+    .containerResultado{
+        background-color: white;
+        margin: 20px;
+        text-align: center;
+        height: 100px; 
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        border: solid 1px rgb(207, 207, 207);
+        border-radius: 5px;
+        color: rgb(71, 69, 69);
+    }
+
+
+    .div4, .div5{
+        background-color: none;
+        text-align: center;   
+        
+    }
+
+    #btnCalcular{
+        background-color: floralwhite;
+        border: solid 1px;
+        border-radius: 5px;
+        margin: 30px 0 0 0;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #7630EB;
+    }
+
+    #btnLimpar{
+        background-color: floralwhite;
+        border: solid 1px;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        font-weight: bold;
+        color: #7630EB;
+    }
+
+
+
+</style>
+
+   
+</head>
+
+
+<body>
+    
+    
+
+    <main class="containerCalculadora">
+        <div class="containerTitulo"> <h1>Calculadora de Juros Compostos</h1></div>
+        <hr>
+        
+        <div class="div1">
+        <h4>Capital Inicial:</h4>
+        <input id="inpCapital" onkeypress="this.value = this.value.replace(/,/g, '.')">
+        </div>
+
+        <div class="div2">
+        <h4>Taxa Mensal:</h4>
+        <input id="inpTaxa" onkeypress="this.value = this.value.replace(/,/g, '.')">
+        </div>
+
+        <div class="div3">
+        <h4>Meses:</h4>
+        <input id="inpPeriodo">
+        </div>
+
+        <div class="div4">
+        <button id="btnCalcular"> Calcular</button>
+        </div>
+
+       
+
+        <div class="containerResultado"> 
+            <p id="txtResultados"></p>
+        </div>
+
+        <div class="div5">
+            <button id="btnLimpar"> Limpar</button>
+        </div>
+
+    </main>
+
+    <script src="./script.js"></script>
+
+</body>
+
+
+</html>
